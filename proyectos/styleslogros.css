@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+body {
+    background: #000;
+    background-repeat: cover;
+    font-family: 'Roboto', sans-serif;
+}
+body:before 
+{
+    content: 'Santi Moreno';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    font-size: 16em;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(91, 213, 243);
+}
+.hidden{
+    overflow: hidden;
+  }
+  .centrado {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titulo {
+  font-size: 55px;
+  text-transform: uppercase;
+  color: #40c3ff;
+  border-radius: 35px;
+}   
+.galeria img {
+  box-shadow: 0 8px 10px -4px #2550FF;
+  border-radius: 15px;
+}
+.materialbox-caption {
+  bottom: 30px;
+  right: 0;
+  width: 40%;
+  padding: 10px;
+  margin: auto;
+  background: #2550FF;
+  box-shadow: 5px 5px #fff;
+  font-size: 20px;
+  color: #fff;
+  line-height: 28px;
+}
+.galeria .col {
+  margin-bottom: 20px;
+}
+.regresar
+{
+  padding-bottom: 50px;
+}
+.regresar a
+{
+    text-decoration: none;
+    color: #fff;
+}
+.regresar a:hover 
+{
+    transition: 0.5s;
+    color: #40c3ff;
+}
+footer p i {
+    margin: 0;
+}
+footer {
+    padding: 2rem;
+    border-bottom: #2550FF 4px solid;
+}
+@media screen and (max-width: 600px){
+    .materialbox-caption {
+    width: 90%;
+    }
+}
+@media screen and (max-width: 992px){
+    .materialbox-caption {
+        width: 70%;
+    }
+    .footer{
+      margin: 0;
+      justify-content: center;
+      text-align: center;
+      display: flex;
+      width: 90%;
+    }
+}

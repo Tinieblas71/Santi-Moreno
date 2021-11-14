@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="skills.css">
+    <!--icono-->
+    <link rel="shortcut icon" href="../img/SNTI LOGO.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="containerSkills">
+        <h2>Porcentaje de habilidades</h2>
+        <div class="skills">
+            <span class="Name">HTML5</span>
+            <div class="porcent">
+                <div class="progress" style="width: 95%;"></div>
+            </div>
+            <span class="Value">96%</span>
+        </div>
+        
+        <div class="skills">
+            <span class="Name">CSS3</span>
+            <div class="porcent">
+                <div class="progress" style="width: 85%;"></div>
+            </div>
+            <span class="Value">85%</span>
+        </div>
+        
+        <div class="skills">
+            <span class="Name">JavaScript</span>
+            <div class="porcent">
+                <div class="progress" style="width: 62%;"></div>
+            </div>
+            <span class="Value">62%</span>
+        </div>
+
+        <div class="skills">
+            <span class="Name">Python</span>
+            <div class="porcent">
+                <div class="progress" style="width: 83%;"></div>
+            </div>
+            <span class="Value">83%</span>
+        </div>
+
+        <div class="skills">
+            <span class="Name">BackEnd</span>
+            <div class="porcent">
+                <div class="progress" style="width: 25%;"></div>
+            </div>
+            <span class="Value">25%</span>
+        </div>
+        
+        <div class="skills">
+            <span class="Name">Edición de Video</span>
+            <div class="porcent">
+                <div class="progress" style="width: 85%;"></div>
+            </div>
+            <span class="Value">85%</span>
+        </div>
+        <div class="regresar">
+            <a href="../index.html"> <i class="fas fa-chevron-circle-left"></i> Regresar a la página principal</a>
+        </div>
+    </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript">
+        window.sr = ScrollReveal();
+
+            sr.reveal('.Name', {
+        duration: 2000,
+        origin: 'top',
+        distance: '-100px'
+        });
+        sr.reveal('.progress', {
+        duration: 2000,
+        origin: 'left',
+        distance: '-100px'
+        });
+        sr.reveal('.Value', {
+        duration: 2000,
+        origin: 'rigth',
+        distance: '-100px'
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MobileOptimized" content="width">
+    <meta name="Handheldfriendly" content="true">
+    <title>Portfolio Santi Moreno</title>
+    <link rel="shortcut icon" href="img/SNTI LOGO.png" type="image/x-icon">
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="skills/skills.css">
+</head>
+<body>
+    <section class="banner" id="sec">
+        <header>
+            <!--logo-->                                       
+            <a href="index.html" class="logo"><img src="img/SNTI LOGO.png" loading="lazy" class="logoo"></a>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+        <!--info principal-->
+        <div class="content container" id="blur">
+            <div class="content1">
+                <h2>Hola Mundo, <br> Yo soy <span>Santi Moreno</span></h2>
+                <p>Front-End Developer.</p>
+                <a href="#" onclick="toggle1()">Saber más</a>
+            </div>
+        </div>
+        <!--POPUP-->
+        <div id="popup">
+            <h2>Este soy yo: </h2>
+            <p>Joven entusiasta Front-End Developer, con habilidades para desarrollar software más específicamente a la creación de páginas web, aplicaciones de escritorio, videojuegos, edición de video y al diseño gráfico.</p>
+            <img src="img/mexico.png" loading="lazy">
+            <br>
+            <a href="#" onclick="toggle1()">Cerrar</a>
+        </div>
+        <!--boton-whatsap-->
+        <a href="https://api.whatsapp.com/send?phone=525612807356&text=Hola!%20" target="_blank" class="quit">api de whatsapp</a>
+        <div>
+            <div>
+                <form id="formulariowtsp" action="" class="formulariowtsp">
+                    <p class="newmessagewts">¡Hablemos!</p>  <span class="closemodal">X</span>
+                    <label for="">Nombre: </label>
+                    <input id="inputname" class="inputwts" type="text" required=""autocomplete="off">
+                    <label for="">Mensaje: </label>
+                    <textarea id="inputmensaje" name="" id="" cols="30" rows="10" class="textareawts" required=""></textarea>
+                    <button type="submit" id="sendbttn" class="btnwtsp">Enviar mensaje</button type="submit">
+                </form>
+            </div>
+            <img id="icon-whatsapp" class="image-icon-whatsapp" src="img/whatsapp.webp" width="70">
+        </div>
+    </section>
+	<script>
+		var IconWhatsapp = document.querySelector('#icon-whatsapp');
+		var formulariowtsp = document.getElementById('formulariowtsp');
+		var closemodal = document.querySelector('.closemodal');
+		var sendbttn = document.querySelector('#sendbttn');
+		IconWhatsapp.addEventListener('click' , function(){
+			formulariowtsp.classList.toggle('entrarysalir')
+		})
+		closemodal.addEventListener('click' , function(){
+			formulariowtsp.classList.remove('entrarysalir')
+		})
+		sendbttn.addEventListener('click' , EnviarMensaje)
+		function EnviarMensaje(){
+			let name = document.querySelector('#inputname').value;
+			let mensaje = document.querySelector('#inputmensaje').value;
+			let url = "https://api.whatsapp.com/send?phone=525612807356&text=Hola!%20: %0A" + name + "%0A%0AMensaje: %0A" + mensaje + "%0A";
+			window.open(url);
+		}
+	</script>
+    <div id="navigation">
+        <ul>
+            <li><a href="skills/skills.html"><span>&times;</span>Habilidades</a></li>
+            <li><a href="services/services.html"><span>&times;</span>Servicios</a></li>
+            <li><a href="proyectos/proyectos.html"><span>&times;</span>Proyectos</a></li>
+        </ul>
+    </div>
+
+
+    <script type="text/javascript">
+        function toggle(){
+            var sec = document.getElementById('sec');
+            sec.classList.toggle('active');
+            var nav = document.getElementById('navigation');
+            nav.classList.toggle('active');
+        }
+        // POPUP //
+        function toggle1(){
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup = document.getElementById('popup');
+            popup.classList.toggle('active');
+        }
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript">
+        window.sr = ScrollReveal();
+
+            sr.reveal('.content1', {
+        duration: 2000,
+        origin: 'top',
+        distance: '-200px'
+        });
+            sr.reveal('#toggle', {
+        duration: 2000,
+        origin: 'right',
+        distance: '-100px'
+        });
+    </script>
+</body>
+</html>
