@@ -314,6 +314,10 @@ label{
         transition: 0.5s;
         color: #ef0448;
     }
+     .logoo
+    {
+        width: 40%;
+    }
 }
 /* POPUP */
 .container
